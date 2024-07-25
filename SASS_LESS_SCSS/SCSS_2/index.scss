@@ -1,0 +1,49 @@
+$color_1: white;
+$font-family_1: sans-serif;
+
+/* Add your flexbox CSS below here */
+html {
+	font-family: $font-family_1;
+}
+body {
+	margin: 0;
+}
+header {
+	background: purple;
+	height: 100px;
+}
+h1 {
+	text-align: center;
+	color: $color_1;
+	line-height: 100px;
+	margin: 0;
+}
+article {
+	padding: 10px;
+	margin: 10px;
+	background: aqua;
+	flex: 1 200px;
+	&:nth-of-type(3) {
+		flex: 3 200px;
+		display: flex;
+		flex-flow: column;
+		div {
+			&:first-child {
+				flex: 1 100px;
+				display: flex;
+				flex-flow: row wrap;
+				align-items: center;
+				justify-content: space-around;
+			}
+		}
+	}
+}
+section {
+	display: flex;
+}
+button {
+	flex: 1 auto;
+	margin: 5px;
+	font-size: 18px;
+	line-height: 1.5;
+}
